@@ -9,11 +9,20 @@ Indentation
 
 Quoting
 -------
-* Prefer single quotes (``'``) to double quotes (``"``).
-  * Single quotes are easier to type.
-  * Single quotes ensure that special characters don't have any unwanted effects.
-  * Use double quotes if you need interpolation or escape characters (like ``"\n"``).
-  * Distinction carries over to UNIX shell and most other scripting languages.
+
+* Prefer double quotes (``"``) to single quotes (``'``).
+  * Reduces incidental changes.
+    * More likely to have to change from single to double.
+      * When adding an apostrophe.
+      * When needing to add an interpolated section.
+      * When needing to add escape codes.
+  * CONS:
+    * Single quotes are easier to type.
+    * Single quotes provide a quicker indicator that there's no interpolation.
+      * Syntax highlighting pretty much eliminates this as a benefit.
+    * Single quotes are preferred default for literal strings in Bash shell scripting.
+      * Other similar languages have similar distinctions.
+* If double quotes are required in the string use ``%(my "interpolated" string)``. 
 * Prefer ``%(interpolated string)`` to other options, like ``%[]`` and ``%{}``.
   * Just generally looks cleaner than the other options.
   * Seems to be the most common choice for most Ruby programmers.
