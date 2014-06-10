@@ -36,8 +36,11 @@ Parentheses
   * Around arguments in method definitions. (This is most common, but not universal, in the Ruby community.)
   * In most calls to instance methods that take arguments.
 * Omit optional parentheses:
-  * In almost every call that takes no arguments. (This makes it look and feel like an attribute instead of a method call.)
-  * In most calls to class methods when called within the class definition, because they feel more like commands than method calls.
+  * In almost every call that takes no arguments.
+    * This makes it look and feel like an attribute instead of a method call.
+      * This is called the [Uniform Access Principle](http://en.wikipedia.org/wiki/Uniform_access_principle).
+  * In most calls to class methods when called within the class definition.
+    * Because they feel more like commands than method calls.
   * When using most DSLs.
   * In RSpec ``should`` calls. Note that you'll need to include the parentheses for any methods after the ``should`` that take arguments.
 * Parentheses are required:
